@@ -65,6 +65,9 @@ done
 tput sgr0
 tput rc
 
+while true
+do
+
 tput cup 10 1
 read -p "Continue? [y/n]" con
 
@@ -75,4 +78,7 @@ case $con in
 
         [nN]* ) clear
 		exit;;
+
+	* ) echo "Please just answer yes or no";;
 esac
+done
