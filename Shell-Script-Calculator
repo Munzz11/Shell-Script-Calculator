@@ -65,11 +65,14 @@ done
 tput sgr0
 tput rc
 
+tput cup 10 1
 read -p "Continue? [y/n]" con
 
 case $con in
 
-        [yY]* )bash  Shell-Script-Calculator;;
+        [yY]* ) clear
+		bash  Shell-Script-Calculator;;
 
-        [nN]* ) exit;;
+        [nN]* ) clear
+		exit;;
 esac
