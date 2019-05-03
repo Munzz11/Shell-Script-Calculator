@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# clear the screen
+tput clear
+
+# Move cursor to screen location X,Y
+tput cup 3 17
+
+# Set a fourground color using ANSI $
+tput setaf 5
+# Set reverse video mode
+tput rev
+echo " C A L C U L A T O R "
+tput sgr0
+
+tput cup 5 17
+tput setaf 5
+echo "By: Avery Muñoz"
+tput sgr0
+
+tput cup 7 15
+echo "1. Add"
+
+tput cup 8 15
+echo "2. Subtract"
+
+tput cup 9 15
+echo "3. Multiply"
+
+tput cup 10 15
+echo "4. Divide"
+
+while true
+do
+tput bold
+tput setaf 5
+tput cup 12 15
+read -p "Enter your choice [1-4]" choice
+tput sgr0
+
+case $choice in
+        [1]* ) clear
+                python add.py
+                break;;
+
+	[2]* ) clear
+                python subtract.py
+                break;;
+
+        [3]* ) clear
+                python multiply.py
+                break;;
+
+        [4]* ) clear
+                python divide.py
+                break;;
+
+        *)tput cup 13 15
+         echo "Incorrect input!"
+
+esac
+done
+
+
+tput sgr0
+tput rc
+
+read -p "Continue? [y/n]" con
+
+case $con in
+
+        [yY]* )bash  Shell-Script-Calculator;;
+
+        [nN]* ) exit;;
+esac
