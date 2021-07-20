@@ -40,19 +40,19 @@ tput sgr0
 
 case $choice in
         [1]* ) clear
-                python add.py
+                python3 add.py
                 break;;
 
 	[2]* ) clear
-                python subtract.py
+                python3 subtract.py
                 break;;
 
         [3]* ) clear
-                python multiply.py
+                python3 multiply.py
                 break;;
 
         [4]* ) clear
-                python divide.py
+                python3 divide.py
                 break;;
 
         *)tput cup 13 15
@@ -82,3 +82,4 @@ case $con in
 	* ) echo "Please just answer yes or no";;
 esac
 done
+

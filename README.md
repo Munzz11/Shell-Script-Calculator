@@ -10,5 +10,8 @@ Note: the files must remain in the same directory
 
 ## Notes 
 - The program must be run in a bash command line
-- The program requires Python to be installed
-  -Install python with " sudo apt-get install python "
+- The program requires Python3 to be installed
+
+## Demo
+
+![screen-gif](./demo.gif)

@@ -3,11 +3,11 @@ Prompt2 = "Enter second number"
 
 print(Prompt1)
 
-s = raw_input()
+s = input()
 
 print(Prompt2)
 
-s2 = raw_input()
+s2 = input()
 
 a = float(s) - float(s2)
 
